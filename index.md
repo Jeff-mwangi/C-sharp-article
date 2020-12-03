@@ -3,7 +3,7 @@ C# is pronounced as "C-Sharp".
 ### Why C#:
 C# is a modern object-oriented programming language that is portable and requires a .NET framework on a machine for it to run.
 
-The performance of c# is exceptional in terms of speed and it can cheaply use resources.
+The performance of C# is exceptional in terms of speed and it can cheaply use resources.
 Many applications can be created using C#. Some of these are given as follows:
 
 - Web applications
@@ -111,7 +111,7 @@ Any text between ```/*``` and ```*/``` will be ignored by C#.
 
 - Line 2:```using System```
 
-In C#, it means that we can use the classes available in the system. It contains commonly-used types.
+In C#, it means that we can use the classes available in the system. It contains commonly-used types and classes.
 
 
 - Line 3: ```namespace HelloWorld{...}``` 
@@ -135,20 +135,20 @@ Any program must have the ```Main``` method.
 It prints a string and moves to the start of the next line.
 In our case, it is used to output *Hello World*.
 
-```Console. Write()```Prints a string in the same without moving to the next line.
+```Console.Write()```Prints a string in the same line without moving to the next line.
 
 - Line 7 ```Console.ReadLine();```
 
 ```Console.ReadLine()``` is used to read the next characters in the input system.
-In the above program, as soon as the user enters anything and presses the ENTER key, it terminates.
+In the above program, as soon as the user enters a character(s) and presses the ENTER key, it terminates.
 
-```Console. Read()```is used to read the next character in the input system.
+```Console.Read()```is used to read the next character in the input system.
 
 ```Console.ReadKey()``` It obtains the next key pressed by the user. It is mostly used to hold the console for the user until he presses a key.
 
 **Note**
-- Each line ends with a semi-colon.
-- C# follows a particular order when executing the program.
+- Each line in C# ends with a semi-colon(;).
+- C# follows a particular order when executing the program(top-bottom).
 - C# is a case-sensitive language. Case sensitive language simply means that it treats lowercase and uppercase characters differently..e.g program and Program it's a different thing.
 
 
