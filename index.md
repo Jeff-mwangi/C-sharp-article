@@ -15,43 +15,42 @@ Many applications can be created using C#. Some of these are given as follows:
 - And so much more.
 
 
-C# is a friendlier and easier language to understand for beginners.
+C# is a friendlier and easier language to understand for beginners compared to other programming languages. (e.g C and C++).
 
 To get started, we need:
-- A working computer
-- An IDE
+- An IDE(Integrated Development Environment) that is used to edit and compile code. In our case, we shall use Visual Studio which we can download from [here](https://visualstudio.microsoft.com/vs/community/).
 
-The easiest way to get started with C# is to use an IDE. An IDE (Integrated Development Environment) is used to edit and compile code.
-In our case, we shall use Visual Studio which we can download from https://visualstudio.microsoft.com/vs/community/.
+Programs written in C# use the .NET Framework to run. .Net is a framework used to create applications easier and run the .Net software. In our tutorial, we need it to run our code.
+.NET Framework was developed by Microsoft and runs primarily on Windows operating systems. There is an open-source project as well – it's called Mono which delivers a cross-platform.
 
-Programs written in C# use the .NET Framework to run.
-.NET Framework was developed by Microsoft and runs primarily on Windows operating systems. There is an open-source project as well – it's called Mono. Mono delivers a cross-platform .NET Framework compatible set of tools (like runtime, C# compiler, etc.).
+### Installing C# 
+Once you have downloaded and installed Visual Studio, choose .NET desktop development and click on the `Modify` button:
+![vscode](installation.png)
 
-### C# Install
-Once you have downloaded and installed the Visual Studio, choose the .NET workload and click on the *Modify/Install* button:
-![vscode](netframework.png)
+After the installation, click on the *launch* to get started.  
 
-After the installation, click on the launcher icon to get started.
-On the new window,choose *Create new project* :
+On the new window,choose *Create new project* : 
 ![newproject](vs1.png)
 
-On the click, choose *"Install more tools and features"* then click the Next button:
+On the click, choose *"Install more tools and features"* then click *Next*:
 
 ![newproject](Newproject2.png)
 
-Choose *"Console App (.NET Core)"* from the list and click on the Next button:
+Choose *"Console App (.NET Core)"* from the list and click *Next*:
 
 ![newproject](Consoleapp.png)
 
-Enter the name you would like to call your project and click *Create*. In this case, I will call it *HelloWorld*:
+Enter the name you would like to call your project and click *Create*. In this case, I will name my file as *HelloWorld*:
 
 ![newproject](projectname.png)
 
-The Visual Code will automatically generate some basic syntax of C# for you:
+Visual Code will automatically generate some code of C# for you:
 
 ![newproject](Program.png)
 
-Let's get started in coding.
+Let us look at the code.
+
+
 Below is an example of the code that will be generated. It is a *Hello World* program.
 ```C#
 using System;
@@ -63,16 +62,18 @@ class Program
 static void Main(string[] args)
 {
 Console.WriteLine("Hello World!");
-}
-}
+        }
+    }
 }
 ```
 
-For you to run the program, you can press the *F5* button on your keyboard.
-This will compile and run your code. A window console will pop:
+
+For you to run the program, you can press the *F5* key on your keyboard.
+This will compile and run your code. A window console will pop with an output as below:
 
 ```
 Hello World!
+
 C:\Users\Username\source\repos\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.0\HelloWorld.exe (process 13784) exited with code 0.
 To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
 Press any key to close this window . . .
@@ -80,7 +81,7 @@ Press any key to close this window . . .
 
 ### C# Syntax
 
-From the above program, we created a *Hello World* program. Let's understand each line while making some changes:
+From the above code, we created a program that prints out a *Hello World*. Let us understand each line while making some changes: 
 
 ```C#
 //This is a C# program
@@ -100,62 +101,66 @@ Console.ReadLine();
 ```
 Here:
 
-- Line 1: ```//This is a C# program```. 
+
+**Line 1:** 
+
+```c#
+//This is a C# program
+```
+
 
 The line starts with two forward slashes which makes it a comment. C# ignores the line when executing the code.
 This is a single-line comment.
 
-For multiple-line comment,we use ``` /* ```and ends with ```*/```.
+For multiple-line comment,we use ``` /* ```and ends with ```*/```. <!--use single back ticks for inline code blocks-->
 
-Any text between ```/*``` and ```*/``` will be ignored by C#.
+Any text between ```/*``` and ```*/``` will be ignored by C#. <!--here too!-->
 
-- Line 2:```using System```
+- Line 2: ```using System```
 
-In C#, it means that we can use the classes available in the system. It contains commonly-used types and classes.
+In C#, it means that we can use the classes available in the system. It contains commonly-used types and classes. <!--what are the commonly used types and classes? explain a few and/or provide an external resource-->
 
-
-- Line 3: ```namespace HelloWorld{...}``` 
+- Line 3: ```namespace HelloWorld{...}``` <!--what does the {...} here mean?-->
 
 Namespaces are used in C# to organize and provide a level of separation of codes. It is a container that consists of classes, methods, and other namespaces.
 
 - Line 4: ``` class Program{...}```
 
-Class is a container that contains data and methods. 
+Class is a container that contains data and methods. <!--this should be somewhere above. where you mentioned classes for the first time!-->
 Since C# is Object-oriented programming, creating a class is mandatory for each program. In our case, we are creating a class called Program.
 
 - Line 5: ```static void Main(string[] args)```
 
 Any program execution starts from the ```Main``` method.
 Any code outside the main method will not be executed **unless** it is called.
-Any program must have the ```Main``` method.
+Any program must have the ```Main``` method. <!-- use "every" instead of "any" where necessary! -->
 
 - Line 6 ```Console.WriteLine("Hello World!");```
 
 ```Console.WriteLine``` It is used to print out or output text on the console.
 It prints a string and moves to the start of the next line.
-In our case, it is used to output *Hello World*.
+In our case, it is used to output *Hello World*. <!--put quotes around hello world-->
 
-```Console.Write()```Prints a string in the same line without moving to the next line.
+```Console.Write()```Prints a string in the same line without moving to the next line. <!-- what is console.write()? also provide docs for this methods/function/idk -->
 
 - Line 7 ```Console.ReadLine();```
 
 ```Console.ReadLine()``` is used to read the next characters in the input system.
 In the above program, as soon as the user enters a character(s) and presses the ENTER key, it terminates.
 
-```Console.Read()```is used to read the next character in the input system.
+```Console.Read()```is used to read the next character in the input system. <!-- what is the difference between this method and the one right above?-->
 
 ```Console.ReadKey()``` It obtains the next key pressed by the user. It is mostly used to hold the console for the user until he presses a key.
 
-**Note**
+**Note** 
+<!--display the content below as blockquotes-->
 - Each line in C# ends with a semi-colon(;).
 - C# follows a particular order when executing the program(top-bottom).
-- C# is a case-sensitive language. Case sensitive language simply means that it treats lowercase and uppercase characters differently..e.g program and Program it's a different thing.
+- C# is a case-sensitive language. Case sensitive language simply means that it treats lowercase and uppercase characters differently..e.g `program` and `Program` mean different things.
 
+**Congratulations!** You just wrote your first C# program. <!--no I didn't! it was generated by vs-->
 
-
-**Congratulations!** You just wrote your first C# program.
-
-Let's dive into another program whereby a user will be able to input two numbers and get the sum of the two numbers.
+Let's dive into another program whereby a user will be able to input two numbers and get the sum of the two numbers. <!--"Let's write another ..." sounds better-->
 
 ```C#
 //This is a C# program to add two numbers
@@ -178,10 +183,11 @@ Console.ReadLine();
 }
 
 ```
+<!--please indent your code-->
 
-Here's how your program will look like:
+Here's how your program will look like: <!--"... program output will .."-->
 
-```C
+```bash
 Enter your first number: 2
 
 Enter your second number: 5
@@ -189,30 +195,28 @@ Enter your second number: 5
 Your Sum is 7
 ```
 
-Let's discuss the new things in our program:
+Let's discuss the new things in our program: <!--"Let us look at ..."-->
 
-- ```int num1= Convert.ToInt32(Console.ReadLine());```
+- ```int num1= Convert.ToInt32(Console.ReadLine());``` <!--put this in a proper code block. ie. remove it from the list-->
 
-```int num1``` This means that we are creating a memory location to hold an integer (int). In our case, we have named the integer **num1**. 
+```int num1``` This means that we are creating a memory location to hold an integer (int). In our case, we have named the integer **num1**.
 
 Just like integers, we have double data type which can store fractional numbers:
-```C
+```C#
 double num1;
 ```
 
 ```Convert.ToInt()```
 When we prompt the user to enter any details, C# takes the input as strings therefore, we have to convert the strings to numbers using the method above. 
 
-```Console.ReadLine()``` accepts data from the user and allocates it to the memory location we had created earlier.
+```Console.ReadLine()``` accepts data from the user and allocates it to the memory location we had created earlier. <!--does it accept? or does it take?-->
 
-That's the basics of C#. The best way to kick-off this journey of C# is by practicing these basics from time to time.
-
+That's the basics of C#. <!--not really! talk about what you have looked at in this tutorial --> The best way to kick-off this journey of C# is by practicing these basics from time to time. <!--If you can get rid of this line please do, or reword it-->
 ### Takeaways
-In this article, we have learned why we should start using C#. Most important, we have gone through the basics of C#, breaking down the line to line for better understanding. We will explore more on C# in our next tutorial.
+In this article, we have learned why we should start using C#. Most important, we have gone through the basics of C#, breaking down the line to line for better understanding. We will explore more on C# in our next tutorial. <!--Talk about what you have looked at in this tutorial. This is a standalone tutorial, so don't mention a future tutorial!->
 
 
-
-
-
-
-
+<!--
+- use code blocks correctly.
+- indent your code correctly
+-->
