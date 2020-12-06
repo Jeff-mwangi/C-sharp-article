@@ -205,12 +205,12 @@ Console.ReadLine();
 
 Here's how your program output will look like:
 
-```bash
+```C#
 Enter your first number: 2
 
 Enter your second number: 5
 
-Your Sum is 7
+Your Sum Is 7
 ```
 
 Let us look at the new things in our program:
